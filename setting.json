@@ -1,0 +1,119 @@
+{
+  "workbench.colorTheme": "Palenight Theme",
+  "workbench.iconTheme": "material-icon-theme",
+  "files.autoSave": "afterDelay",
+  "editor.fontSize": 16,
+  "editor.fontFamily": "\"Jetbrains Mono\",\"微软雅黑\"",
+  "editor.lineNumbers": "relative",
+  "editor.inlineSuggest.enabled": true,
+  "editor.renderWhitespace": "all",
+  "terminal.external.osxExec": "iTerm.app",
+  "terminal.integrated.fontFamily": "\"Jetbrains Mono\"",
+  "terminal.integrated.tabs.enabled": true,
+  "git.autofetch": true,
+  "gitlens.views.repositories.files.layout": "list",
+  "dart.debugExternalLibraries": true,
+  "dart.debugSdkLibraries": false,
+  "dart.openDevTools": "flutter",
+  "git.confirmSync": false,
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "git.enableSmartCommit": true,
+  "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[html]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "editor.formatOnSave": true,
+  "[markdown]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[dart]": {
+    "editor.formatOnSave": true,
+    "editor.formatOnType": true,
+    "editor.rulers": [80],
+    "editor.selectionHighlight": false,
+    "editor.suggest.snippetsPreventQuickSuggestions": false,
+    "editor.suggestSelection": "first",
+    "editor.tabCompletion": "onlySnippets",
+    "editor.wordBasedSuggestions": false
+  },
+  "workbench.editorAssociations": {
+    "*.ipynb": "jupyter-notebook"
+  },
+  "[vue]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "notebook.cellToolbarLocation": {
+    "default": "right",
+    "jupyter-notebook": "left"
+  },
+  "tabnine.experimentalAutoImports": true,
+  "telemetry.telemetryLevel": "error",
+  "terminal.integrated.fontSize": 14,
+  "[rust]": {
+    "editor.defaultFormatter": "rust-lang.rust"
+  },
+
+  "projectManager.sortList": "Name",
+  "C_Cpp.clang_format_fallbackStyle": "LLVM",
+  "cmake.configureOnOpen": true,
+  "vscode-edge-devtools.mirrorEdits": true,
+  "editor.largeFileOptimizations": false,
+  "editor.guides.bracketPairs": true,
+  "editor.bracketPairColorization.enabled": true,
+  "editor.bracketPairColorization.independentColorPoolPerBracketType": true,
+  "workbench.colorCustomizations": {
+    "editorBracketHighlight.foreground1": "#ffd700",
+    "editorBracketPairGuide.activeBackground1": "#ffd7007f",
+    "editorBracketHighlight.foreground2": "#da70d6",
+    "editorBracketPairGuide.activeBackground2": "#da70d67f",
+    "editorBracketHighlight.foreground3": "#87cefa",
+    "editorBracketPairGuide.activeBackground3": "#87cefa7f",
+    "editorBracketHighlight.foreground4": "#ffd700",
+    "editorBracketPairGuide.activeBackground4": "#ffd7007f",
+    "editorBracketHighlight.foreground5": "#da70d6",
+    "editorBracketPairGuide.activeBackground5": "#da70d67f",
+    "editorBracketHighlight.foreground6": "#87cefa",
+    "editorBracketPairGuide.activeBackground6": "#87cefa7f",
+    "editorBracketHighlight.unexpectedBracket.foreground": "#ff0000"
+  },
+  "Lua.telemetry.enable": false,
+  "todohighlight.isEnable": true,
+  "todohighlight.include": [
+    "**/*.js",
+    "**/*.jsx",
+    "**/*.ts",
+    "**/*.tsx",
+    "**/*.html",
+    "**/*.php",
+    "**/*.css",
+    "**/*.scss",
+    "**/*.py"
+  ],
+  "todohighlight.exclude": [
+    "**/node_modules/**",
+    "**/bower_components/**",
+    "**/dist/**",
+    "**/build/**",
+    "**/.vscode/**",
+    "**/.github/**",
+    "**/_output/**",
+    "**/*.min.*",
+    "**/*.map",
+    "**/.next/**",
+    "**/venv/**"
+  ],
+  "go.toolsManagement.autoUpdate": true
+}
