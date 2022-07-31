@@ -8,7 +8,7 @@ export ZSH="$HOME/.oh-my-zsh"
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-ZSH_THEME="robbyrussell"
+ZSH_THEME="agnoster"
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -70,7 +70,11 @@ ZSH_THEME="robbyrussell"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git)
+plugins=(
+  git
+  zsh-syntax-highlighting
+  zsh-autosuggestions
+)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -102,11 +106,11 @@ source $ZSH/oh-my-zsh.sh
 #
 
 host_ip=$(cat /etc/resolv.conf |grep "nameserver" |cut -f 2 -d " ")
-
 alias setproxy="export ALL_PROXY=http://$host_ip:7890; echo 'SET PROXY SUCCESS!!!'"
 alias unsetproxy="unset ALL_PROXY; echo 'UNSET PROXY SUCCESS!!!'"
-export HOMEBREW_BREW_GIT_REMOTE="https://mirrors.tuna.tsinghua.edu.cn/git/homebrew/brew.git"
-export HOMEBREW_CORE_GIT_REMOTE="https://mirrors.tuna.tsinghua.edu.cn/git/homebrew/homebrew-core.git"
-eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 
-export GOPROXY=https://goproxy.cn,direct
+alias v="nvim"
+
+# macos
+alias typora="/Applications/Typora.app/Contents/MacOS/Typora"
+alias code="/Applications/Visual\ Studio\ Code.app/Contents/MacOS/Electron"
