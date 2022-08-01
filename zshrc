@@ -110,6 +110,7 @@ alias setproxy="export ALL_PROXY=http://$host_ip:7890; echo 'SET PROXY SUCCESS!!
 alias unsetproxy="unset ALL_PROXY; echo 'UNSET PROXY SUCCESS!!!'"
 
 alias v="nvim"
+alias ll="exa --tree --long --all -L1 --time-style=long-iso -hHg"
 
 # macos
 alias typora="/Applications/Typora.app/Contents/MacOS/Typora"

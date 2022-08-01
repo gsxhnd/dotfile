@@ -3,6 +3,7 @@
   "workbench.iconTheme": "material-icon-theme",
   "files.autoSave": "afterDelay",
   "editor.fontSize": 16,
+  "editor.lineHeight": 1.5,
   "editor.fontFamily": "\"Jetbrains Mono\",\"微软雅黑\"",
   "editor.lineNumbers": "relative",
   "editor.inlineSuggest.enabled": true,
