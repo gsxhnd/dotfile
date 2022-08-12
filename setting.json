@@ -3,20 +3,48 @@
   "workbench.iconTheme": "material-icon-theme",
   "files.autoSave": "afterDelay",
   "editor.fontSize": 16,
+  "editor.fontLigatures": true,
   "editor.lineHeight": 1.5,
-  "editor.fontFamily": "\"Jetbrains Mono\",\"微软雅黑\"",
+  "editor.fontFamily": "'Jetbrains Mono','微软雅黑','Droid Sans Mono', 'monospace', monospace",
   "editor.lineNumbers": "relative",
   "editor.inlineSuggest.enabled": true,
   "editor.renderWhitespace": "all",
+  "editor.formatOnSave": true,
+  "editor.largeFileOptimizations": false,
+  "editor.guides.bracketPairs": true,
+  "editor.bracketPairColorization.enabled": true,
+  "editor.bracketPairColorization.independentColorPoolPerBracketType": true,
   "terminal.external.osxExec": "iTerm.app",
   "terminal.integrated.fontFamily": "\"Jetbrains Mono\"",
   "terminal.integrated.tabs.enabled": true,
+  "terminal.integrated.fontSize": 14,
+  // git setting
   "git.autofetch": true,
   "gitlens.views.repositories.files.layout": "list",
-  "dart.debugExternalLibraries": true,
-  "dart.debugSdkLibraries": false,
-  "dart.openDevTools": "flutter",
   "git.confirmSync": false,
+  "workbench.editorAssociations": {
+    "*.ipynb": "jupyter-notebook"
+  },
+  "workbench.colorCustomizations": {
+    "editorBracketHighlight.foreground1": "#ffd700",
+    "editorBracketPairGuide.activeBackground1": "#ffd7007f",
+    "editorBracketHighlight.foreground2": "#da70d6",
+    "editorBracketPairGuide.activeBackground2": "#da70d67f",
+    "editorBracketHighlight.foreground3": "#87cefa",
+    "editorBracketPairGuide.activeBackground3": "#87cefa7f",
+    "editorBracketHighlight.foreground4": "#ffd700",
+    "editorBracketPairGuide.activeBackground4": "#ffd7007f",
+    "editorBracketHighlight.foreground5": "#da70d6",
+    "editorBracketPairGuide.activeBackground5": "#da70d67f",
+    "editorBracketHighlight.foreground6": "#87cefa",
+    "editorBracketPairGuide.activeBackground6": "#87cefa7f",
+    "editorBracketHighlight.unexpectedBracket.foreground": "#ff0000"
+  },
+  "window.commandCenter": true,
+  "telemetry.telemetryLevel": "error",
+  // "http.proxy": "http://127.0.0.1:7890"
+
+  // language setting
   "[typescript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
@@ -36,9 +64,19 @@
   "[typescriptreact]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-  "editor.formatOnSave": true,
+  "[python]": {
+    "editor.defaultFormatter": "ms-python.python"
+  },
   "[markdown]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.unicodeHighlight.ambiguousCharacters": false,
+    "editor.unicodeHighlight.invisibleCharacters": false,
+    "editor.wordWrap": "on",
+    "editor.quickSuggestions": {
+      "comments": "off",
+      "strings": "off",
+      "other": "off"
+    }
   },
   "[dart]": {
     "editor.formatOnSave": true,
@@ -50,45 +88,33 @@
     "editor.tabCompletion": "onlySnippets",
     "editor.wordBasedSuggestions": false
   },
-  "workbench.editorAssociations": {
-    "*.ipynb": "jupyter-notebook"
-  },
   "[vue]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
+
+  // remote setting
+  "remote.SSH.remotePlatform": {
+    "vps-tx-01": "linux",
+    "rasp": "linux",
+    "tokyo_dev": "linux"
+  },
+
+  // lanugae plugins setting
+  "dart.debugExternalLibraries": true,
+  "dart.debugSdkLibraries": false,
+  "dart.openDevTools": "flutter",
+  "C_Cpp.clang_format_fallbackStyle": "LLVM",
+  "go.toolsManagement.autoUpdate": true,
+
+  // plugins setting
+  "tabnine.experimentalAutoImports": true,
   "notebook.cellToolbarLocation": {
     "default": "right",
     "jupyter-notebook": "left"
   },
-  "tabnine.experimentalAutoImports": true,
-  "telemetry.telemetryLevel": "error",
-  "terminal.integrated.fontSize": 14,
-  "[rust]": {
-    "editor.defaultFormatter": "rust-lang.rust"
-  },
   "projectManager.sortList": "Name",
-  "C_Cpp.clang_format_fallbackStyle": "LLVM",
   "cmake.configureOnOpen": true,
   "vscode-edge-devtools.mirrorEdits": true,
-  "editor.largeFileOptimizations": false,
-  "editor.guides.bracketPairs": true,
-  "editor.bracketPairColorization.enabled": true,
-  "editor.bracketPairColorization.independentColorPoolPerBracketType": true,
-  "workbench.colorCustomizations": {
-    "editorBracketHighlight.foreground1": "#ffd700",
-    "editorBracketPairGuide.activeBackground1": "#ffd7007f",
-    "editorBracketHighlight.foreground2": "#da70d6",
-    "editorBracketPairGuide.activeBackground2": "#da70d67f",
-    "editorBracketHighlight.foreground3": "#87cefa",
-    "editorBracketPairGuide.activeBackground3": "#87cefa7f",
-    "editorBracketHighlight.foreground4": "#ffd700",
-    "editorBracketPairGuide.activeBackground4": "#ffd7007f",
-    "editorBracketHighlight.foreground5": "#da70d6",
-    "editorBracketPairGuide.activeBackground5": "#da70d67f",
-    "editorBracketHighlight.foreground6": "#87cefa",
-    "editorBracketPairGuide.activeBackground6": "#87cefa7f",
-    "editorBracketHighlight.unexpectedBracket.foreground": "#ff0000"
-  },
   "Lua.telemetry.enable": false,
   "todohighlight.isEnable": true,
   "todohighlight.include": [
@@ -100,8 +126,7 @@
     "**/*.php",
     "**/*.css",
     "**/*.scss",
-    "**/*.py",
-    "**/*.rs"
+    "**/*.py"
   ],
   "todohighlight.exclude": [
     "**/node_modules/**",
@@ -115,6 +140,5 @@
     "**/*.map",
     "**/.next/**",
     "**/venv/**"
-  ],
-  "go.toolsManagement.autoUpdate": true
+  ]
 }
