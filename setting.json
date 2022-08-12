@@ -126,7 +126,8 @@
     "**/*.php",
     "**/*.css",
     "**/*.scss",
-    "**/*.py"
+    "**/*.py",
+    "**/*.rs"
   ],
   "todohighlight.exclude": [
     "**/node_modules/**",
