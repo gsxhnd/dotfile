@@ -56,3 +56,11 @@ brew install neovim exa duf neofetch bat bottom httpie procs
 ```bash
 brew install protobuf protoc-gen-go protoc-gen-go-grpc
 ```
+
+### rust
+
+<www.rust-lang.org>
+
+```bash
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+```
