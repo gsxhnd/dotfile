@@ -22,6 +22,7 @@
   "git.autofetch": true,
   "gitlens.views.repositories.files.layout": "list",
   "git.confirmSync": false,
+  "git.enableSmartCommit": true,
   "workbench.editorAssociations": {
     "*.ipynb": "jupyter-notebook"
   },
@@ -48,7 +49,6 @@
   "[typescript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-  "git.enableSmartCommit": true,
   "[jsonc]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
@@ -91,6 +91,11 @@
   "[vue]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
+  "[less]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.suggest.insertMode": "replace",
+    "gitlens.codeLens.scopes": ["document"]
+  },
 
   // remote setting
   "remote.SSH.remotePlatform": {
@@ -114,7 +119,6 @@
   },
   "projectManager.sortList": "Name",
   "cmake.configureOnOpen": true,
-  "vscode-edge-devtools.mirrorEdits": true,
   "Lua.telemetry.enable": false,
   "todohighlight.isEnable": true,
   "todohighlight.include": [
@@ -141,5 +145,6 @@
     "**/*.map",
     "**/.next/**",
     "**/venv/**"
-  ]
+  ],
+  "redhat.telemetry.enabled": false
 }
