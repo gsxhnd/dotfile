@@ -103,15 +103,3 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-#
-
-host_ip=$(cat /etc/resolv.conf |grep "nameserver" |cut -f 2 -d " ")
-alias setproxy="export ALL_PROXY=http://$host_ip:7890; echo 'SET PROXY SUCCESS!!!'"
-alias unsetproxy="unset ALL_PROXY; echo 'UNSET PROXY SUCCESS!!!'"
-
-alias v="nvim"
-alias ll="exa --tree --long --all -L1 --time-style=long-iso -hHg"
-
-# macos
-alias typora="/Applications/Typora.app/Contents/MacOS/Typora"
-alias code="/Applications/Visual\ Studio\ Code.app/Contents/MacOS/Electron"
