@@ -1,17 +1,16 @@
 # dotfile
 
-## zsh
+## oh my zsh
 
 <https://ohmyz.sh/>
 
 ### 安装 oh-my-zsh
 
-`https://mirrors.tuna.tsinghua.edu.cn/help/ohmyzsh.git/`
+国内安装 omz 文档 `https://mirrors.tuna.tsinghua.edu.cn/help/ohmyzsh.git/`
+国内安装 HomeBrew 执行
 
 ```bash
-git clone https://mirrors.tuna.tsinghua.edu.cn/git/ohmyzsh.git
-cd ohmyzsh/tools
-REMOTE=https://mirrors.tuna.tsinghua.edu.cn/git/ohmyzsh.git sh install.sh
+./script/install-omz-cn.sh
 ```
 
 ### 插件
@@ -20,44 +19,31 @@ REMOTE=https://mirrors.tuna.tsinghua.edu.cn/git/ohmyzsh.git sh install.sh
 
 <https://github.com/zsh-users/zsh-syntax-highlighting>
 
+安装插件
+
+```bash
+./script/install-zsh-plugin.sh
+```
+
 ## brew
 
-安装 HomeBrew `https://mirrors.tuna.tsinghua.edu.cn/help/homebrew/`
+国内安装 HomeBrew 文档 <https://mirrors.tuna.tsinghua.edu.cn/help/homebrew/>
+国内安装 HomeBrew 执行
 
 ```bash
-export HOMEBREW_BREW_GIT_REMOTE="https://mirrors.tuna.tsinghua.edu.cn/git/homebrew/brew.git"
-export HOMEBREW_CORE_GIT_REMOTE="https://mirrors.tuna.tsinghua.edu.cn/git/homebrew/homebrew-core.git"
-export HOMEBREW_BOTTLE_DOMAIN="https://mirrors.tuna.tsinghua.edu.cn/homebrew-bottles"
-
-git clone --depth=1 https://mirrors.tuna.tsinghua.edu.cn/git/homebrew/install.git brew-install
-
-/bin/bash brew-install/install.sh
-
-rm -rf brew-install
+./script/install-brew-cn.sh
 ```
 
-## 使用 Brew 安装环境
-
-### 安装开发环境
-
-```bash
-brew install gcc@5 gcc python@3.9 python@3.10
-brew install go node yarn llvm@12
-```
+国外服务器安装 HomeBrew
+`/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"`
 
 ### 安装软件
 
 ```bash
-brew install neovim exa duf neofetch bat bottom httpie procs
+./script/brew-install.sh
 ```
 
-### GRPC
-
-```bash
-brew install protobuf protoc-gen-go protoc-gen-go-grpc
-```
-
-### rust
+## rust
 
 <www.rust-lang.org>
 
