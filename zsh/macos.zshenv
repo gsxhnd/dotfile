@@ -1,5 +1,9 @@
 export JAVA_HOME=$(/usr/libexec/java_home -v 1.8)
 export PATH=$PATH:$JAVA_HOME/bin
+export PATH=$PATH:~/go/bin
+
+. "$HOME/.cargo/env"
+
 
 alias typora="/Applications/Typora.app/Contents/MacOS/Typora"
 alias code="/Applications/Visual\ Studio\ Code.app/Contents/MacOS/Electron"

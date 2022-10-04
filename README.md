@@ -13,6 +13,10 @@
 ./script/install-omz-cn.sh
 ```
 
+```bash
+sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+```
+
 ### 插件
 
 <https://github.com/zsh-users/zsh-autosuggestions>
