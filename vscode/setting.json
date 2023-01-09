@@ -41,9 +41,8 @@
     "editorBracketPairGuide.activeBackground6": "#87cefa7f",
     "editorBracketHighlight.unexpectedBracket.foreground": "#ff0000"
   },
-  "window.commandCenter": true,
   "telemetry.telemetryLevel": "error",
-  // "http.proxy": "http://127.0.0.1:7890"
+  // "http.proxy": "http://127.0.0.1:7890",
 
   // language setting
   "[typescript]": {
@@ -146,5 +145,6 @@
     "**/.next/**",
     "**/venv/**"
   ],
-  "redhat.telemetry.enabled": false
+  "redhat.telemetry.enabled": false,
+  "window.titleBarStyle": "custom"
 }
