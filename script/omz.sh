@@ -24,6 +24,7 @@ install_omz_plugins() {
 }
 
 main() {
+    cat $ROOT_PATH/zsh/zshrc > ~/.zshrc
     case $2 in
         "cn" )
             echo "Install oh my zsh with cn mirror"
