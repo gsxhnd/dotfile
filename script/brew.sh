@@ -50,4 +50,4 @@ main() {
     brew_install_cli
 }
 
-main
+main $1
