@@ -64,9 +64,8 @@ main() {
 
 
 test() {
-    echo $ROOT_PATH
-    cat $ROOT_PATH/zsh/cn.zshenv
+    
 }
 
-# main
-test
+main
+# test
