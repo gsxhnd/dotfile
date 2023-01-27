@@ -1,21 +1,12 @@
 # dotfile
 
-## oh my zsh
+## Oh my zsh
 
 <https://ohmyz.sh/>
 
 ### 安装 oh-my-zsh
 
 国内安装 omz 文档 `https://mirrors.tuna.tsinghua.edu.cn/help/ohmyzsh.git/`
-国内安装 HomeBrew 执行
-
-```bash
-./script/install-omz-cn.sh
-```
-
-```bash
-sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-```
 
 ### 插件
 
@@ -23,33 +14,31 @@ sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.
 
 <https://github.com/zsh-users/zsh-syntax-highlighting>
 
-安装插件
+### 执行安装
 
 ```bash
-./script/install-zsh-plugin.sh
+# 正常安装omz
+./script/omz.sh
+
+# 国内安装omz
+./script/omz.sh cn
 ```
 
-## brew
+## 安装 HomeBrew
 
 国内安装 HomeBrew 文档 <https://mirrors.tuna.tsinghua.edu.cn/help/homebrew/>
-国内安装 HomeBrew 执行
 
 ```bash
-./script/install-brew-cn.sh
+# 安装homebrew
+./script/brew.sh
+
+# 国内安装homebrew
+./script/brew.sh
 ```
 
-国外服务器安装 HomeBrew
-`/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"`
+## Rust
 
-### 安装软件
-
-```bash
-./script/brew-install.sh
-```
-
-## rust
-
-<www.rust-lang.org>
+官网： <www.rust-lang.org>
 
 ```bash
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
