@@ -64,7 +64,7 @@ main() {
 
 
 test() {
-    
+    echo "Test"
 }
 
 main
