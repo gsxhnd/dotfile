@@ -24,7 +24,7 @@ install_omz_plugins() {
 }
 
 main() {
-    case $1 in
+    case $2 in
         "cn" )
             echo "Install oh my zsh with cn mirror"
             install_omz_cn
@@ -36,24 +36,24 @@ main() {
             ;;
     esac
 
-    case $2 in
-        "wsl")
+    case $1 in
+        "wsl" )
             echo "Write wsl environment"
             cat $ROOT_PATH/zsh/wsl.zshenv >> ~/.zshrc
             ;;
-        "linux")
+        "linux" )
             echo "Write linux environment"
             cat $ROOT_PATH/zsh/linux.zshenv >> ~/.zshrc
             ;;
-        "macos")
+        "macos" )
             echo "Write mac environment"
             cat $ROOT_PATH/zsh/macos.zshenv >> ~/.zshrc
             ;;
-        "vps")
+        "vps" )
             echo "Write vps environment"
             cat $ROOT_PATH/zsh/vps.zshenv >> ~/.zshrc
             ;;
-        "*")
+        * )
             echo "Skip environment"
             ;;
     esac
