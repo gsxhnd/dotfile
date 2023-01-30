@@ -28,7 +28,7 @@ brew_install_node() {
 }
 
 brew_install_cli() {
-    brew install bottom procs
+    brew install bottom procs fzf lazygit
     brew install neovim exa duf neofetch bat httpie
 }
 
