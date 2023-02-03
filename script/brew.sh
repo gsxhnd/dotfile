@@ -27,13 +27,14 @@ brew_install_node() {
     brew install node node@18 node@16 yarn pnpm
 }
 
-brew_install_cli() {
-    brew install bottom procs fzf lazygit
-    brew install neovim exa duf neofetch bat httpie
-}
-
 brew_install_go() {
     brew install go protobuf protoc-gen-go protoc-gen-go-grpc
+}
+
+brew_install_cli() {
+    brew install bottom procs fzf lazygit 
+    brew install neovim exa duf neofetch bat httpie httpstate
+    brew install k9s
 }
 
 main() {
