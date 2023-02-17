@@ -11,7 +11,7 @@ install_brew_cn() {
     export HOMEBREW_BOTTLE_DOMAIN="https://mirrors.tuna.tsinghua.edu.cn/homebrew-bottles"
 
     git clone --depth=1 https://mirrors.tuna.tsinghua.edu.cn/git/homebrew/install.git brew-install
-    /bin/bash brew-install/install.sh
+    ./brew-install/install.sh
     rm -rf brew-install
 }
 
