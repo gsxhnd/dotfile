@@ -104,3 +104,30 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+
+# cn mirror
+# export HOMEBREW_BREW_GIT_REMOTE="https://mirrors.tuna.tsinghua.edu.cn/git/homebrew/brew.git"
+# export HOMEBREW_CORE_GIT_REMOTE="https://mirrors.tuna.tsinghua.edu.cn/git/homebrew/homebrew-core.git"
+# export FLUTTER_STORAGE_BASE_URL="https://mirrors.tuna.tsinghua.edu.cn/flutter"
+# export PUB_HOSTED_URL="https://mirrors.tuna.tsinghua.edu.cn/dart-pub"
+# export GOPROXY=https://proxy.golang.com.cn,direct
+# export RUSTUP_UPDATE_ROOT=https://mirrors.tuna.tsinghua.edu.cn/rustup/rustup
+# export RUSTUP_DIST_SERVER=https://mirrors.tuna.tsinghua.edu.cn/rustup
+export PATH=$PATH:~/go/bin
+export JAVA_HOME=$(/usr/libexec/java_home -v 1.8)
+export PATH=$PATH:$JAVA_HOME/bin
+
+eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+. "$HOME/.cargo/env"
+
+# proxy
+# alias setproxy="export ALL_PROXY=http://127.0.0.1:7890; echo 'SET PROXY SUCCESS!!!'"
+# alias unsetproxy="unset ALL_PROXY; echo 'UNSET PROXY SUCCESS!!!'"
+# wsl proxy
+# host_ip=$(cat /etc/resolv.conf |grep "nameserver" |cut -f 2 -d " ")
+# alias setproxy="export ALL_PROXY=http://$host_ip:7890; echo 'SET PROXY SUCCESS!!!'"
+# alias unsetproxy="unset ALL_PROXY; echo 'UNSET PROXY SUCCESS!!!'"
+
+alias ll="exa --tree --long --all -L1 --time-style=long-iso -hHg"
+alias typora="/Applications/Typora.app/Contents/MacOS/Typora"
+alias code="/Applications/Visual\ Studio\ Code.app/Contents/MacOS/Electron"

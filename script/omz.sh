@@ -52,11 +52,4 @@ main() {
     cat $ROOT_PATH/zsh/cmd.zshenv >> ~/.zshrc
 }
 
-
-test() {
-    echo "Test"
-    echo $1 $2
-}
-
-# test $1 $2
 main $1 $2
