@@ -113,12 +113,22 @@ source $ZSH/oh-my-zsh.sh
 # export GOPROXY=https://proxy.golang.com.cn,direct
 # export RUSTUP_UPDATE_ROOT=https://mirrors.tuna.tsinghua.edu.cn/rustup/rustup
 # export RUSTUP_DIST_SERVER=https://mirrors.tuna.tsinghua.edu.cn/rustup
+# cn mirror end
+#
+
 export PATH=$PATH:~/go/bin
 export JAVA_HOME=$(/usr/libexec/java_home -v 1.8)
 export PATH=$PATH:$JAVA_HOME/bin
 
+# brew 
 eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+export LDFLAGS="-L$(brew --prefix)/lib"
+export CPPFLAGS="-I$(brew --prefix)/lib"
+# brew end
+
+# rust
 . "$HOME/.cargo/env"
+# rust end
 
 # proxy
 # alias setproxy="export ALL_PROXY=http://127.0.0.1:7890; echo 'SET PROXY SUCCESS!!!'"
@@ -128,6 +138,10 @@ eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 # alias setproxy="export ALL_PROXY=http://$host_ip:7890; echo 'SET PROXY SUCCESS!!!'"
 # alias unsetproxy="unset ALL_PROXY; echo 'UNSET PROXY SUCCESS!!!'"
 
+# command
 alias ll="exa --tree --long --all -L1 --time-style=long-iso -hHg"
 alias typora="/Applications/Typora.app/Contents/MacOS/Typora"
 alias code="/Applications/Visual\ Studio\ Code.app/Contents/MacOS/Electron"
+alias v="nvim"
+# command end
+
