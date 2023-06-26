@@ -52,14 +52,3 @@ lvim.plugins = {
 
 lvim.builtin.treesitter.rainbow.enable = true
 lvim.format_on_save = true
-
--- Normal-mode commands
-lvim.keys.normal_mode["<M-j>"] = ":MoveLine(1)<CR>"
-lvim.keys.normal_mode["<M-k>"] = ":MoveLine(-1)<CR>"
-
--- Visual-mode commands
-local opts = { noremap = true, silent = true }
-vim.keymap.set('v', '<A-k>', ':MoveBlock(-1)<CR>', opts)
-vim.keymap.set('v', '<A-j>', ':MoveBlock(1)<CR>', opts)
-vim.keymap.set('v', '<A-l>', ':MoveHBlock(1)<CR>', opts)
-vim.keymap.set('v', '<A-h>', ':MoveHBlock(-1)<CR>', opts)
