@@ -23,16 +23,18 @@ install_omz_plugins() {
     git clone ${SYNTAX_HIGHLIGHTING_PLUGIN} ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
 }
 
-main() {
-    case $1 in
-        "cn" )
-            install_omz_cn
-        ;;
-        * )
-            install_omz
-        ;;
-    esac
-    install_omz_plugins
-    cat $ROOT_PATH/.zshrc > ~/.zshrc
-}
-main $1
+# main() {
+#     case $1 in
+#         "cn" )
+#             install_omz_cn
+#         ;;
+#         * )
+#             install_omz
+#         ;;
+#     esac
+#     install_omz_plugins
+#     cat $ROOT_PATH/.zshrc > ~/.zshrc
+# }
+# main $1
+
+echo ${ROOT_PATH}
