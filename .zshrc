@@ -125,15 +125,17 @@ source $ZSH/oh-my-zsh.sh
 # proxy end
 
 
+# export JAVA_HOME=$(/usr/libexec/java_home -v 1.8)
+# export PATH=$PATH:$JAVA_HOME/bin
 export PATH=$PATH:~/go/bin
-export JAVA_HOME=$(/usr/libexec/java_home -v 1.8)
-export PATH=$PATH:$JAVA_HOME/bin
 export PATH="$PATH:/home/gsxhnd/.local/bin"
 export LDFLAGS="-L$(brew --prefix)/lib"
 export CPPFLAGS="-I$(brew --prefix)/lib"
 . "$HOME/.cargo/env"
 
+# Homebrew 环境变量
 eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+# zsh termial configuration
 eval "$(starship init zsh)"
 eval "$(zellij setup --generate-auto-start zsh)"
 
