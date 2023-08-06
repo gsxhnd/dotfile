@@ -124,24 +124,31 @@ source $ZSH/oh-my-zsh.sh
 # alias unsetproxy="unset ALL_PROXY; echo 'UNSET PROXY SUCCESS!!!'"
 # proxy end
 
-
-# export JAVA_HOME=$(/usr/libexec/java_home -v 1.8)
-# export PATH=$PATH:$JAVA_HOME/bin
-export PATH=$PATH:~/go/bin
-export PATH="$PATH:/home/gsxhnd/.local/bin"
-export LDFLAGS="-L$(brew --prefix)/lib"
-export CPPFLAGS="-I$(brew --prefix)/lib"
-. "$HOME/.cargo/env"
-
-# Homebrew 环境变量
+# Terminal environment configuration
+# Linux Homebrew 环境变量
 eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+# Linux Homebrew 环境变量
+eval "$(/opt/homebrew/bin/brew shellenv)"  
 # zsh termial configuration
 eval "$(starship init zsh)"
 eval "$(zellij setup --generate-auto-start zsh)"
+# Terminal environment configuration end
 
-# command alias
+# Programer environment configuration
+# export JAVA_HOME=$(/usr/libexec/java_home -v 1.8)
+# export PATH=$PATH:$JAVA_HOME/bin
+export PATH=$PATH:~/go/bin
+export LDFLAGS="-L$(brew --prefix)/lib"
+export CPPFLAGS="-I$(brew --prefix)/lib"
+# mac rust environment
+source "$HOME/.cargo/env" 
+# linux rust environment
+. "$HOME/.cargo/env"
+# Programer environment configuration end
+
+# Terminl Command alias
 alias ll="exa --tree --long --all -L1 --time-style=long-iso -hHg --icons"
-alias typora="/Applications/Typora.app/Contents/MacOS/Typora"
-alias code="/Applications/Visual\ Studio\ Code.app/Contents/MacOS/Electron"
 alias v="nvim"
-# command alias end
+# mac command alias
+alias typora="/Applications/Typora.app/Contents/MacOS/Typora"
+# Terminal Command alias end
