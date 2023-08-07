@@ -6,7 +6,11 @@ SYNTAX_HIGHLIGHTING_PLUGIN=https://github.com/zsh-users/zsh-syntax-highlighting.
 ROOT_PATH=$(pwd)
 
 install_omz() {
+    echo "Installing oh my zsh"
     sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+    echo "Installing omz plugins..."
+    git clone ${AUTOSUGGESTIONS_PLUGIN} ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+    git clone ${SYNTAX_HIGHLIGHTING_PLUGIN} ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
 }
 
 install_omz_cn() {
@@ -15,12 +19,6 @@ install_omz_cn() {
     REMOTE=https://mirrors.tuna.tsinghua.edu.cn/git/ohmyzsh.git sh install.sh
     cd ../..
     rm -rf ohmyzsh
-}
-
-install_omz_plugins() {
-    echo "Installing omz plugins..."
-    git clone ${AUTOSUGGESTIONS_PLUGIN} ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
-    git clone ${SYNTAX_HIGHLIGHTING_PLUGIN} ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
 }
 
 install_brew() {
@@ -33,44 +31,15 @@ install_brew_cn() {
     rm -rf brew-install
 }
 
-brew_install_dev() {
-    brew install gcc@5 gcc llvm@12 conan python@3.10 pipenv node node@18 yarn pnpm go protobuf protoc-gen-go protoc-gen-go-grpc
-}
-
-brew_install_cli() {
-    brew install bottom procs exa duf neofetch
-    brew install lazygit lazydocker onefetch
-    brew install neovim bat httpie httpstate
-    brew install k9s helm kubernetes-cli
-}
-
 move_config_file() {
     cat $ROOT_PATH/.zshrc > ~/.zshrc
-    cp -r $ROOT_PATH/alacritty ~/.config/
+    cat $ROOT_PATH/alacritty/alacritty_linux.toml > ~/.config/alacritty/alacritty.toml
     cp -r $ROOT_PATH/zellij ~/.config/
 }
 
-cleanup() {
-    rm -rf ~/.oh-my-zsh
-    rm -rf ~/.config/alacritty
-    rm -rf ~/.config/zellij
-}
-
 main() {
-    case $1 in
-        "omz" )
-            install_omz
-            install_omz_plugins
-        ;;
-        "clean" )
-            cleanup
-        ;;
-        "config" )
-            move_config_file
-        ;;
-        * )
-            echo "You must"
-        ;;
-    esac
+    install_omz
+    install_brew
+    move_config_file
 }
-main $1
+main

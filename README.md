@@ -1,13 +1,19 @@
 # dotfile
 
 ```shell
-    brew install llvm@12 conan
-    brew python@3.10 pipenv
-    brew node node@18 yarn
-    brew go protobuf protoc-gen-go protoc-gen-go-grpc
-    brew install bottom procs exa duf neofetch bat
-    brew install httpie httpstate
-    brew install lazygit lazydocker onefetch
     brew install neovim zellij starship
-    brew install k9s helm kubernetes-cli
+    brew install bottom procs htop
+    brew install exa duf neofetch erdtre tree
+    brew install neovim bat jq riggrep fzf
+    brew install lazygit lazydocker onefetch joshuto
+    brew install mdbook pandoc
+    brew install httpie httpstate k6
+    brew install k9s helm kubernetes-cli kind
+
+    brew install llvm@12 conan cmake
+    brew install go go-task goreleaser
+    brew install protobuf protoc-gen-go protoc-gen-go-grpc
+    brew install python@3.10 pipenv
+    brew install node node@18 yarn
+    brew install wasm-pack
 ```

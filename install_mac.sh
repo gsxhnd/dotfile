@@ -19,28 +19,14 @@ install_brew() {
 move_config_file() {
     git clone https://github.com/alacritty/alacritty-theme ~/.config/alacritty/themes
     cat $ROOT_PATH/.zshrc > ~/.zshrc
-    cp -r $ROOT_PATH/alacritty ~/.config/
+    cat $ROOT_PATH/alacritty/alacritty_mac.yml > ~/.config/alacritty/alacritty.yml
     cp -r $ROOT_PATH/zellij ~/.config/
 }
 
 
-cleanup() {
-    rm -rf ~/.oh-my-zsh
-    rm -rf ~/.config/alacritty
-    rm -rf ~/.config/zellij
-}
-
 main() {
-    case $1 in
-        ;;
-        "clean" )
-            cleanup
-        ;;
-        * )
-            install_omz
-            install_brew
-            move_config_file
-        ;;
-    esac
+    install_omz
+    install_brew
+    move_config_file
 }
-main $1
+main

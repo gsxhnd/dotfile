@@ -9,7 +9,7 @@ scrolling:
   multiplier: 20
 
 window:
-  decorations: "Transparent"
+  decorations: "transparent"
   dynamic_padding: true
   startup_mode: "Windowed"
   opacity: 0.96
