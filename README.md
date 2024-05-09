@@ -3,7 +3,7 @@
 ```shell
     brew install neovim zellij starship
     brew install bottom procs htop
-    brew install exa duf neofetch erdtre tree
+    brew install eza duf neofetch erdtre tree
     brew install neovim bat jq riggrep fzf
     brew install lazygit lazydocker onefetch joshuto
     brew install mdbook pandoc

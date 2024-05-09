@@ -131,7 +131,7 @@ eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 eval "$(/opt/homebrew/bin/brew shellenv)"  
 # zsh termial configuration
 eval "$(starship init zsh)"
-eval "$(zellij setup --generate-auto-start zsh)"
+# eval "$(zellij setup --generate-auto-start zsh)"
 # Terminal environment configuration end
 
 # Programer environment configuration
@@ -147,8 +147,7 @@ source "$HOME/.cargo/env"
 # Programer environment configuration end
 
 # Terminl Command alias
-alias ll="exa --tree --long --all -L1 --time-style=long-iso -hHg --icons"
-alias v="nvim"
+alias ll="eza --tree --long --all -L1 --time-style=long-iso -hHg --icons"
 # mac command alias
 alias typora="/Applications/Typora.app/Contents/MacOS/Typora"
 # Terminal Command alias end
