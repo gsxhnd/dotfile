@@ -1,5 +1,11 @@
 live_config_reload = true
 import = ["~/.config/alacritty/themes/themes/catppuccin_mocha.toml"]
+general.import = [
+    # "~/.config/alacritty/catppuccin-latte.toml",
+    # "~/.config/alacritty/catppuccin-frappe.toml"
+    # "~/.config/alacritty/catppuccin-macchiato.toml"
+    "~/.config/alacritty/catppuccin-mocha.toml",
+]
 # tabspaces = 4
 
 [scrolling]
@@ -24,7 +30,7 @@ lines = 60
 
 [window.padding]
 x = 10
-y = 0
+y = 5
 
 [font]
 size = 12
