@@ -138,16 +138,18 @@ eval "$(starship init zsh)"
 # export JAVA_HOME=$(/usr/libexec/java_home -v 1.8)
 # export PATH=$PATH:$JAVA_HOME/bin
 export PATH=$PATH:~/go/bin
+# export GOPROXY=https://goproxy.cn,direct
 export LDFLAGS="-L$(brew --prefix)/lib"
 export CPPFLAGS="-I$(brew --prefix)/lib"
 # mac rust environment
-source "$HOME/.cargo/env" 
+source "$HOME/.cargo/env"
 # linux rust environment
 . "$HOME/.cargo/env"
 # Programer environment configuration end
 
 # Terminl Command alias
-alias ll="eza --tree --long --all -L1 --time-style=long-iso -hHg --icons"
-# mac command alias
-alias typora="/Applications/Typora.app/Contents/MacOS/Typora"
+alias ll="eza --tree --long --all -L1 --time-style=long-iso -hHg --icons --group-directories-first"
+alias ll2="eza --tree --long --all -L2 --time-style=long-iso -hHg --icons --group-directories-first"
+alias setproxy="export ALL_PROXY=http://127.0.0.1:7890; echo 'SET PROXY SUCCESS!!!'"
+alias unsetproxy="unset ALL_PROXY; echo 'UNSET PROXY SUCCESS!!!'"
 # Terminal Command alias end
