@@ -4,6 +4,7 @@ echo "before linux wsl"
 {{   else -}}
 #!/bin/sh
 echo "before linux"
+ls -al ~/.config
 {{   end -}}
 {{ else if eq .chezmoi.os "darwin" -}}
 #!/bin/sh
