@@ -7,8 +7,6 @@ echo "run once os: linux wsl"
 echo "run once linux"
 ls -al ~/.config
 {{   end -}}
-echo y | sh -c "$(curl -fsSL https://install.ohmyz.sh)"
-# curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 {{ else if eq .chezmoi.os "darwin" -}}
 #!/bin/sh
 echo "before macos"
