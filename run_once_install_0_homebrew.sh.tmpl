@@ -1,11 +1,15 @@
 {{ if eq .chezmoi.os "linux" -}}
 {{   if (.chezmoi.kernel.osrelease | lower | contains "microsoft") }}
-echo "linux wsl"
+#!/bin/sh
+echo "run once os: linux wsl"
 {{   else -}}
 #!/bin/sh
-echo "linux"
+echo "run once linux"
+ls -al ~/.config
 {{   end -}}
+echo y | sh -c "$(curl -fsSL https://install.ohmyz.sh)"
+# curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 {{ else if eq .chezmoi.os "darwin" -}}
 #!/bin/sh
-echo "macos"
+echo "before macos"
 {{ end -}}

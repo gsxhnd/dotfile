@@ -1,6 +1,6 @@
 {{ if eq .chezmoi.os "linux" -}}
 {{   if (.chezmoi.kernel.osrelease | lower | contains "microsoft") }}
-echo "before linux wsl"
+echo "os: linux wsl"
 {{   else -}}
 #!/bin/sh
 echo "before linux"
